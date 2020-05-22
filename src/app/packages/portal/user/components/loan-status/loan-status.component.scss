@@ -1,0 +1,28 @@
+@import '../../../../../../assets/styles/core/core';
+
+.loan-status-section {
+
+    .wrapper {
+        text-align: right;
+    }
+
+    .apply-loan {
+        text-transform: uppercase;
+        font-size: 10px;
+        text-align: center;
+        display: inline-block;
+        letter-spacing: 2px;
+        padding: 5px 15px;
+        border-radius: 2px;
+        color: $white-color;
+        margin-bottom: 15px;
+        cursor: pointer;
+        &:before {
+            border-radius: 2px;
+        }
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<main class="loan-status-page">
+    <section class="loan-status-section">
+        <div class="wrapper">
+            <h5 class="title">Applied Loan Details</h5>
+            <button class="apply-loan site-btn" type="button" (click)="applyNewLoan()">Apply New Loan</button>
+        </div>
+        <loan-app-loan-list [loanLists]="loanLists"></loan-app-loan-list>
+    </section>
+</main>

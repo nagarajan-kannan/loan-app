@@ -1,0 +1,36 @@
+<div class="alert alert-danger" [class.show]="errorMessage">{{ errorMessage }}</div>
+<div class="alert" [class.show]="successMessage">{{ successMessage }}</div>
+
+<main class="login-page">
+    <section class="login-section">
+        <div class="login-block">
+            <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
+                <h3 class="login-title">Signup</h3>
+                <div class="form-field">
+                    <input
+                        type="text"
+                        class="txt-box"
+                        placeholder="Username"
+                        formControlName="username"
+                        name="username"
+                        [class.has-error]="!signupForm.controls['username'].valid && signupForm.controls['username'].touched" />
+                </div>
+                <div class="form-field">
+                    <input
+                        type="password"
+                        class="txt-box"
+                        placeholder="Password"
+                        formControlName="password"
+                        name="password"
+                        [class.has-error]="!signupForm.controls['password'].valid && signupForm.controls['password'].touched" />
+                </div>
+                <button
+                    type="submit"
+                    class="site-btn login-btn"
+                    [class.disabled]="!signupForm.valid">Signup</button>
+                    <a class="signup-link" href="javascript:void(0)" routerLink="/login">Go back to login page</a>
+                    
+            </form>
+        </div>
+    </section>
+</main>

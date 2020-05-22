@@ -1,0 +1,15 @@
+@import '../core/core';
+
+.txt-box {
+    display: block;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    padding: 10px;
+    transition: all 0.2s ease 0s;
+    letter-spacing: 1px;
+    font-size: 13px;
+    background: transparent;
+    &.has-error {
+        border-color: $error-color;
+    }
+}

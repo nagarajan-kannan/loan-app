@@ -1,0 +1,8 @@
+<main class="loan-status-page">
+    <section class="loan-status-section">
+        <div class="wrapper">
+            <h5 class="title">Loan Requests</h5>
+        </div>
+        <loan-app-loan-list [loanLists]="loanLists" (onRowClick)="onRowClick($event)"></loan-app-loan-list>
+    </section>
+</main>

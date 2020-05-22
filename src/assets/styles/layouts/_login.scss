@@ -1,0 +1,63 @@
+@import '../core/core';
+
+.login-section {
+    display: flex;
+    height: $page-min-height;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: $page-bg-color;
+
+    .login-block {
+        background: $white-color;
+        border-radius: 2px;
+        padding: 20px;
+        width: 100%;
+        max-width: 360px;
+
+        .form-field {
+            margin-bottom: 25px;
+        }
+    }
+
+    .login-title {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 0px 0px 15px;
+    }
+
+    .txt-box {
+        width: 100%;
+    }
+
+    .login-btn {
+        text-transform: uppercase;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        letter-spacing: 2px;
+        padding: 12px 20px;
+        border-radius: 4px;
+        color: $white-color;
+        cursor: pointer;
+        &:before {
+            border-radius: 4px;
+        }
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+
+    .signup-link {
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        @include lato-bold();
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+}

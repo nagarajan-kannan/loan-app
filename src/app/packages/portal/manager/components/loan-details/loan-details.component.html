@@ -1,0 +1,22 @@
+<div class="alert" [class.show]="successMessage">{{ successMessage }}</div>
+
+<main class="loan-status-page">
+    <section class="loan-status-section">
+        <div class="wrapper">
+            <h5 class="title">Approve or Reject the Loan</h5>
+        </div>
+        <div class="loan-details">
+            <span class="item">Customer Name: {{ loanDetails?.customerName }}</span>
+            <span class="item">Loan Type: {{ loanDetails?.loanType }}</span>
+            <span class="item">Loan Amount: {{ loanDetails?.loanAmount }}</span>
+            <span class="item">Assigned To: {{ loanDetails?.assignedTo }}</span>
+            <span class="item">Loan Status: {{ loanDetails?.loanStatus }}</span>
+            <span class="item">Manager Approval: {{ loanDetails?.managerApproval }}</span>
+        </div>
+        <div class="btn-set">
+            <button type="button" class="site-btn action-btn" (click)="onActionClick(true)">Accept</button>
+            <button type="button" class="site-btn action-btn reject" (click)="onActionClick()">Reject</button>
+            <button type="button" class="site-btn action-btn reject" (click)="goToRequestPage()">Go Back</button>
+        </div>
+    </section>
+</main>

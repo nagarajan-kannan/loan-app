@@ -1,0 +1,19 @@
+.loan-status-section {
+    padding: 15px;
+
+    .title {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .table {
+
+        tr {
+            cursor: pointer;
+        }
+    }
+
+    .no-records {
+        text-align: center;   
+    }
+}

@@ -1,0 +1,66 @@
+@import "../../../../assets/styles/core/core";
+
+/* Error page styles for the application */
+
+.error-page {
+    .error-section {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0px;
+
+        .error-emoji {
+            font-size: 12em;
+            color: $grey-text-color;
+            display: inline-block;
+
+            i {
+                display: block;
+            }
+        }
+
+        .error-content {
+            font-size: 18px;
+            margin: 15px 0px 25px;
+            color: $black-color;
+        }
+
+        .home-link {
+            display: inline-block;
+            background: $primary-color;
+            @include color($white-color, $opaq-80);
+            text-decoration: none;
+            font-size: 12px;
+            @include lato-semibold();
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border-radius: 2px;
+
+            &:hover {
+                background: $grey-text-color;
+            }
+        }
+    }
+}
+
+/* Styles for extra small screen */
+@media screen and (max-width: 768px) {
+    .error-page {
+        .error-section {
+            padding: 20px 0px;
+
+            .error-emoji {
+                font-size: 8em;
+            }
+
+            .error-content {
+                font-size: 14px;
+                margin: 10px 0px 20px;
+            }
+
+            .home-link {
+                font-size: 10px;
+            }
+        }
+    }
+}

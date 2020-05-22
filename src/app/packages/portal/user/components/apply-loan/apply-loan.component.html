@@ -1,0 +1,48 @@
+<div class="alert" [class.show]="successMessage">{{ successMessage }}</div>
+
+<main class="loan-status-page">
+    <section class="loan-status-section">
+        <div class="wrapper">
+            <h5 class="title">Apply a New Loan</h5>
+        </div>
+        <form class="apply-loan-form" [formGroup]="applyLoanForm" (ngSubmit)="applyLoan(applyLoanForm.value)">
+            <div class="form-field">
+                <input
+                    type="text"
+                    class="txt-box"
+                    placeholder="Customer Name"
+                    formControlName="customerName"
+                    name="customerName"
+                    [class.has-error]="!applyLoanForm.controls['customerName'].valid && applyLoanForm.controls['customerName'].touched" />
+            </div>
+            <div class="form-field">
+                <input
+                    type="text"
+                    class="txt-box"
+                    placeholder="Loan Type"
+                    formControlName="loanType"
+                    name="loanType"
+                    [class.has-error]="!applyLoanForm.controls['loanType'].valid && applyLoanForm.controls['loanType'].touched" />
+            </div>
+            <div class="form-field">
+                <input
+                    type="text"
+                    class="txt-box"
+                    placeholder="Loan Amount"
+                    formControlName="loanAmount"
+                    name="loanAmount"
+                    [class.has-error]="!applyLoanForm.controls['loanAmount'].valid && applyLoanForm.controls['loanAmount'].touched" pattern="^[0-9]*$" />
+            </div>
+            <div class="btn-set">
+                <button
+                type="submit"
+                class="site-btn apply-loan-btn"
+                [class.disabled]="!applyLoanForm.valid">Apply</button>
+                <button type="button" class="site-btn apply-loan-btn cancel-loan-btn"
+                    (click)="cancelApplying()">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </section>
+</main>

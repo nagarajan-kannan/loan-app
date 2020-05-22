@@ -1,0 +1,34 @@
+@import "../../../../../../assets/styles/core/core";
+
+header {
+    padding: 15px;
+    background: $page-bg-color;
+
+    .logout {
+        text-align: right;
+    }
+
+    .username {
+        text-transform: uppercase;
+        margin-right: 15px;
+    }
+
+    .login-btn {
+        text-transform: uppercase;
+        font-size: 10px;
+        text-align: center;
+        display: inline-block;
+        letter-spacing: 2px;
+        padding: 5px 15px;
+        border-radius: 2px;
+        color: $white-color;
+        cursor: pointer;
+        &:before {
+            border-radius: 2px;
+        }
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+}
